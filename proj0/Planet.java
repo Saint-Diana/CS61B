@@ -3,9 +3,6 @@
  * @date 2023-12-31
  */
 public class Planet {
-    /* Constant: G */
-    public static double G = 6.67E-11;
-
     /* its current x position */
     public double xxPos;
 
@@ -67,7 +64,7 @@ public class Planet {
      */
     public double calcForceExertedBy(Planet p) {
         double r = calcDistance(p);
-        return Planet.G * mass * p.mass / Math.pow(r, 2);
+        return 6.67E-11 * mass * p.mass / Math.pow(r, 2);
     }
 
     /**
