@@ -74,7 +74,7 @@ public class Planet {
      * @return return a double describing the force exerted in the X directions
      */
     public double calcForceExertedByX(Planet p) {
-        double dx = Math.abs(xxPos - p.xxPos);
+        double dx = p.xxPos - xxPos;
         double r = calcDistance(p);
         return calcForceExertedBy(p) * dx / r;
     }
@@ -86,7 +86,7 @@ public class Planet {
      * @return return a double describing the force exerted in the Y directions
      */
     public double calcForceExertedByY(Planet p) {
-        double dy = Math.abs(yyPos - p.yyPos);
+        double dy = p.yyPos - yyPos;
         double r = calcDistance(p);
         return calcForceExertedBy(p) * dy / r;
     }
